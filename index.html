@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Service — Премиальный автотехцентр в Красноярске</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#080b11',
+                        cardBg: '#101622',
+                        cardBorder: '#1e293b',
+                        accentBlue: '#2563eb',
+                        accentCyan: '#06b6d4',
+                        gold: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-darkBg text-gray-100 font-['Inter'] antialiased selection:bg-accentBlue selection:text-white pb-24 md:pb-0">
+
+    <!-- Верхняя шапка -->
+    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-cardBorder">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accentBlue to-accentCyan flex items-center justify-center shadow-lg shadow-accentBlue/20">
+                    <span class="font-black text-xl text-white tracking-tighter">Q</span>
+                </div>
+                <div>
+                    <span class="block font-black text-lg tracking-tight text-white leading-none">Q-SERVICE</span>
+                    <span class="text-[11px] text-gray-400 font-medium tracking-wide">АВТОТЕХЦЕНТР • КРАСНОЯРСК</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a href="tel:+79994400350" class="hidden sm:inline-flex items-center space-x-2 bg-gray-800/80 hover:bg-gray-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition border border-gray-700">
+                    <i class="fa-solid fa-phone text-accentCyan"></i>
+                    <span>+7 (999) 440-03-50</span>
+                </a>
+                <a href="https://yandex.ru/maps/org/q_service/1327332085" target="_blank" class="bg-gradient-to-r from-accentBlue to-blue-600 hover:opacity-90 text-white px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-accentBlue/20 transition flex items-center space-x-2">
+                    <i class="fa-solid fa-location-arrow"></i>
+                    <span>Маршрут</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран (Hero) -->
+    <section class="relative pt-10 pb-12 px-4 overflow-hidden">
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accentBlue/15 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto relative z-10">
+            
+            <!-- Рейтинг и статус -->
+            <div class="flex flex-wrap items-center gap-2 mb-6">
+                <div class="inline-flex items-center space-x-2 bg-cardBg/90 border border-cardBorder px-3.5 py-1.5 rounded-full text-xs font-semibold">
+                    <div class="flex text-gold space-x-0.5">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="text-white">4.2 на Яндекс Картах</span>
+                    <span class="text-gray-600">•</span>
+                    <span class="text-gray-400">35 оценок</span>
+                </div>
+                <span class="inline-flex items-center space-x-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-3 py-1.5 rounded-full text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Открыто с 10:00</span>
+                </span>
+            </div>
+
+            <!-- Заголовок -->
+            <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4 leading-tight">
+                Обслуживание & ремонт премиум-класса в Красноярске
+            </h1>
+
+            <p class="text-gray-300 text-base sm:text-lg mb-8 leading-relaxed max-w-2xl">
+                Профессиональный автотехцентр на ул. Шахтёров, 61. Специализация на <strong class="text-white font-semibold">Mercedes-Benz, BMW, Audi</strong>, а также европейских и японских авто. Экспертная диагностика, ремонт подвески, автоэлектрики и кондиционеров.
+            </p>
+
+            <!-- Бренд-плашка -->
+            <div class="bg-cardBg/70 border border-cardBorder p-4 rounded-2xl mb-8 flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-300">
+                <span class="text-gray-400 uppercase tracking-wider font-bold">Специализация:</span>
+                <span class="flex items-center space-x-1.5 bg-gray-800/80 px-3 py-1.5 rounded-lg border border-gray-700/60 text-white"><i class="fa-solid fa-car text-accentCyan"></i><span>Mercedes-Benz</span></span>
+                <span class="flex items-center space-x-1.5 bg-gray-800/80 px-3 py-1.5 rounded-lg border border-gray-700/60 text-white"><i class="fa-solid fa-car text-accentBlue"></i><span>BMW & Audi</span></span>
+                <span class="flex items-center space-x-1.5 bg-gray-800/80 px-3 py-1.5 rounded-lg border border-gray-700/60 text-white"><i class="fa-solid fa-car text-gray-300"></i><span>Европейские & Японские авто</span></span>
+            </div>
+
+            <!-- Кнопки быстрого действия -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="tel:+79994400350" class="flex items-center justify-center space-x-3 bg-gradient-to-r from-accentBlue to-blue-600 hover:opacity-95 text-white font-bold py-3.5 px-6 rounded-2xl shadow-xl shadow-accentBlue/25 transition text-base">
+                    <i class="fa-solid fa-phone-volume text-lg"></i>
+                    <span>Позвонить мастеру</span>
+                </a>
+                <a href="#services" class="flex items-center justify-center space-x-2 bg-cardBg hover:bg-cardBorder text-gray-200 font-semibold py-3.5 px-6 rounded-2xl border border-cardBorder transition text-base">
+                    <i class="fa-solid fa-layer-group text-accentCyan"></i>
+                    <span>Услуги и цены</span>
+                </a>
+            </div>
+
+            <!-- Иконки-преимущества -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10">
+                <div class="bg-cardBg/60 backdrop-blur border border-cardBorder p-3.5 rounded-2xl flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-accentBlue/15 flex items-center justify-center text-accentCyan shrink-0">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-white">Опытные мастера</div>
+                        <div class="text-[11px] text-gray-400">Спецы по Mercedes</div>
+                    </div>
+                </div>
+                <div class="bg-cardBg/60 backdrop-blur border border-cardBorder p-3.5 rounded-2xl flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-accentBlue/15 flex items-center justify-center text-accentCyan shrink-0">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-white">Компьютерная</div>
+                        <div class="text-[11px] text-gray-400">Диагностика и электрика</div>
+                    </div>
+                </div>
+                <div class="bg-cardBg/60 backdrop-blur border border-cardBorder p-3.5 rounded-2xl flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-accentBlue/15 flex items-center justify-center text-accentCyan shrink-0">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-white">Оплата картой</div>
+                        <div class="text-[11px] text-gray-400">Наличные и безнал</div>
+                    </div>
+                </div>
+                <div class="bg-cardBg/60 backdrop-blur border border-cardBorder p-3.5 rounded-2xl flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-accentBlue/15 flex items-center justify-center text-accentCyan shrink-0">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-white">Зона ожидания</div>
+                        <div class="text-[11px] text-gray-400">Wi-Fi и комфорт</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Основные услуги и цены -->
+    <section id="services" class="py-12 px-4 bg-cardBg/30 border-t border-b border-cardBorder/80">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <span class="text-accentCyan font-bold text-xs uppercase tracking-wider block mb-1">Услуги и прайс</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Популярные направления</h2>
+                </div>
+                <span class="text-xs text-gray-400 hidden sm:inline-block">Гарантия на все виды работ</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Услуга 1 -->
+                <div class="bg-cardBg border border-cardBorder hover:border-gray-700 p-5 rounded-2xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-blue-500/15 text-blue-400 text-xs font-bold px-2.5 py-1 rounded-lg">Подвеска & Ходовая</span>
+                            <span class="text-lg font-extrabold text-white">от 1 500 ₽</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Ремонт подвески и замена амортизаторов</h3>
+                        <p class="text-gray-400 text-sm mb-4">Устранение посторонних шумов, стуков и люфтов. Точная диагностика ходовой части любого уровня сложности.</p>
+                    </div>
+                    <ul class="text-xs text-gray-300 space-y-1.5 border-t border-cardBorder pt-3">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accentCyan"></i><span>Замена амортизаторов — от 1 500 ₽</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accentCyan"></i><span>Ремонт рулевых реек и замена колодок</span></li>
+                    </ul>
+                </div>
+
+                <!-- Услуга 2 -->
+                <div class="bg-cardBg border border-cardBorder hover:border-gray-700 p-5 rounded-2xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-cyan-500/15 text-cyan-400 text-xs font-bold px-2.5 py-1 rounded-lg">Климат</span>
+                            <span class="text-lg font-extrabold text-white">от 1 500 ₽</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Заправка и ремонт автокондиционеров</h3>
+                        <p class="text-gray-400 text-sm mb-4">Полная заправка хладагентом, проверка герметичности системы, устранение утечек и ремонт компрессоров.</p>
+                    </div>
+                    <ul class="text-xs text-gray-300 space-y-1.5 border-t border-cardBorder pt-3">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accentCyan"></i><span>Заправка кондиционера — 1 500 ₽</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accentCyan"></i><span>Диагностика и ремонт системы</span></li>
+                    </ul>
+                </div>
+
+                <!-- Услуга 3 -->
+                <div class="bg-cardBg border border-cardBorder hover:border-gray-700 p-5 rounded-2xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-purple-500/15 text-purple-400 text-xs font-bold px-2.5 py-1 rounded-lg">Электрика</span>
+                            <span class="text-lg font-extrabold text-white">Комплекс</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Компьютерная диагностика и автоэлектроника</h3>
+                        <p class="text-gray-400 text-sm mb-4">Поиск и устранение плавающих ошибок, ремонт автоэлектрики, чистка форсунок, ремонт стартеров и генераторов.</p>
+                    </div>
+                    <ul class="text-xs text-gray-300 space-y-1.5 border-t border-cardBorder pt-3">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accentCyan"></i><span>Установка сигнализаций и парктроников</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accentCyan"></i><span>Ремонт блоков управления</span></li>
+                    </ul>
+                </div>
+
+                <!-- Услуга 4 -->
+                <div class="bg-cardBg border border-cardBorder hover:border-gray-700 p-5 rounded-2xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-amber-500/15 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-lg">Двигатель & ТО</span>
+                            <span class="text-lg font-extrabold text-white">По запросу</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Ремонт ДВС, КПП, АКПП и базовое ТО</h3>
+                        <p class="text-gray-400 text-sm mb-4">Полное сервисное обслуживание, замена масла в ДВС и коробке, ремонт дизельных и бензиновых моторов.</p>
+                    </div>
+                    <ul class="text-xs text-gray-300 space-y-1.5 border-t border-cardBorder pt-3">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accentCyan"></i><span>Замена масла и фильтров</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-accentCyan"></i><span>Ремонт тормозной и выхлопной систем</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Список всех видов работ -->
+            <div class="mt-8 bg-cardBg border border-cardBorder p-5 rounded-2xl">
+                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center space-x-2">
+                    <i class="fa-solid fa-wrench text-accentCyan"></i>
+                    <span>Все выполняемые работы в Q-Service</span>
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Замена амортизаторов</span>
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Заправка кондиционеров</span>
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Диагностика Mercedes/BMW/Audi</span>
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Ремонт рулевых реек</span>
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Чистка форсунок</span>
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Ремонт АКПП и КПП</span>
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Дизельный сервис</span>
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Шиномонтаж</span>
+                    <span class="bg-gray-800/80 text-gray-300 text-xs px-3 py-1.5 rounded-xl border border-gray-700/60">Ремонт автоэлектрики</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Отзывы клиентов -->
+    <section class="py-12 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-accentCyan font-bold text-xs uppercase tracking-wider block mb-1">Блок доверия</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Отзывы клиентов с Яндекс Карт</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Отзыв 1 -->
+                <div class="bg-cardBg border border-cardBorder p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold text-xs mb-3 space-x-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-4 leading-relaxed">
+                            «Заезжала в Q-Service с проблемой постороннего шума в подвеске. Опытный мастер по Mercedes быстро и качественно устранил поломку. Цены соответствуют высокому уровню сервиса!»
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 border-t border-cardBorder pt-3">
+                        <div class="w-8 h-8 rounded-full bg-accentBlue/20 text-accentCyan font-bold flex items-center justify-center text-xs">Е</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Елена Богданова</div>
+                            <div class="text-[10px] text-gray-400">Знаток Яндекс Карт</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="bg-cardBg border border-cardBorder p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold text-xs mb-3 space-x-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-4 leading-relaxed">
+                            «Загонял Мазду. Менял колодки, крестовину и сальник. Взяли без очереди, всё сделали за пару часов без перекуров. Молодцы, и цены адекватные. Рекомендую!»
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 border-t border-cardBorder pt-3">
+                        <div class="w-8 h-8 rounded-full bg-accentBlue/20 text-accentCyan font-bold flex items-center justify-center text-xs">В</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Вадим Яковлев</div>
+                            <div class="text-[10px] text-gray-400">Знаток Яндекс Карт</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="bg-cardBg border border-cardBorder p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold text-xs mb-3 space-x-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-4 leading-relaxed">
+                            «Грамотные мастера, вопросов не возникает. Всё чётко и в срок, как договаривались! Если у вас немец, то вам однозначно сюда.»
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 border-t border-cardBorder pt-3">
+                        <div class="w-8 h-8 rounded-full bg-accentBlue/20 text-accentCyan font-bold flex items-center justify-center text-xs">К</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Константин Тамкович</div>
+                            <div class="text-[10px] text-gray-400">Знаток Яндекс Карт</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и локация -->
+    <section class="py-12 px-4 bg-cardBg/30 border-t border-cardBorder/80">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <span class="text-accentCyan font-bold text-xs uppercase tracking-wider block mb-1">Ждем вас</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Контакты и адрес</h2>
+                <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                    Предварительная запись позволяет нам принять ваш автомобиль без очереди и выполнить ремонт точно в срок.
+                </p>
+
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-accentBlue/10 flex items-center justify-center text-accentCyan shrink-0 mt-0.5">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-400 font-medium">Адрес автотехцентра</div>
+                            <div class="text-white font-bold text-base">г. Красноярск, ул. Шахтёров, 61</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-accentBlue/10 flex items-center justify-center text-accentCyan shrink-0 mt-0.5">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-400 font-medium">Телефон для записи</div>
+                            <a href="tel:+79994400350" class="text-white font-bold text-base hover:text-accentCyan transition">+7 (999) 440-03-50</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-accentBlue/10 flex items-center justify-center text-accentCyan shrink-0 mt-0.5">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-400 font-medium">Режим работы</div>
+                            <div class="text-white font-bold text-base">Ежедневно, с 10:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://yandex.ru/maps/org/q_service/1327332085" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-accentBlue to-blue-600 hover:opacity-90 text-white font-bold py-3 px-5 rounded-xl transition text-sm">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Открыть в Яндекс Картах</span>
+                </a>
+            </div>
+
+            <!-- Карточка записи -->
+            <div class="bg-cardBg border border-cardBorder p-6 rounded-3xl text-center relative overflow-hidden shadow-2xl">
+                <div class="w-16 h-16 rounded-2xl bg-accentBlue/20 text-accentCyan flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Q-Service Красноярск</h3>
+                <p class="text-gray-400 text-sm mb-6">Качественное обслуживание немецких и импортных автомобилей по честной цене.</p>
+                <a href="tel:+79994400350" class="inline-flex items-center justify-center space-x-2 w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-3.5 px-4 rounded-xl border border-gray-700 transition">
+                    <i class="fa-solid fa-phone text-accentCyan"></i>
+                    <span>Позвонить для консультации</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="py-8 px-4 border-t border-cardBorder text-center text-xs text-gray-500">
+        <div class="max-w-5xl mx-auto">
+            <p class="mb-2">© Q-Service • Красноярск, ул. Шахтёров, 61</p>
+            <p>Информация на сайте не является публичной офертой.</p>
+        </div>
+    </footer>
+
+    <!-- Плавающая нижняя панель для мобильных -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-darkBg/95 backdrop-blur-md border-t border-cardBorder p-3 flex items-center justify-around md:hidden">
+        <a href="tel:+79994400350" class="flex-1 mr-2 bg-gradient-to-r from-accentBlue to-blue-600 text-white py-3 px-4 rounded-xl font-bold text-sm text-center shadow-lg shadow-accentBlue/25 flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-phone"></i>
+            <span>Позвонить</span>
+        </a>
+        <a href="https://yandex.ru/maps/org/q_service/1327332085" target="_blank" class="flex-1 ml-2 bg-gray-800 hover:bg-gray-700 text-white py-3 px-4 rounded-xl font-semibold text-sm text-center border border-gray-700 flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-location-arrow text-accentCyan"></i>
+            <span>Маршрут</span>
+        </a>
+    </div>
+
+</body>
+</html>
